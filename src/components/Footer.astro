@@ -1,0 +1,100 @@
+---
+const footerLinks = [
+  { label: 'Home', href: '/#home' },
+  { label: 'Our Carts', href: '/#carts' },
+  { label: 'Event Rentals', href: '/#packages' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'About', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
+];
+
+const socialLinks = [
+  { label: 'Instagram', href: 'https://instagram.com/createitsis' },
+  { label: 'Facebook', href: 'https://facebook.com/createitsis' },
+];
+---
+
+<footer class="bg-brand-charcoal border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <!-- Column 1: Contact Us -->
+      <div>
+        <h3 class="font-serif text-xl text-white mb-6">Contact Us</h3>
+        <ul class="space-y-3">
+          <li>
+            <a
+              href="mailto:hello@createitsis.com"
+              class="text-white/60 text-sm hover:text-brand-gold transition-colors duration-300"
+            >
+              hello@createitsis.com
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:8455550199"
+              class="text-white/60 text-sm hover:text-brand-gold transition-colors duration-300"
+            >
+              845-555-0199
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Follow Us -->
+      <div>
+        <h3 class="font-serif text-xl text-white mb-6">Follow Us</h3>
+        <ul class="space-y-3">
+          {socialLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-white/60 text-sm hover:text-brand-gold transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Column 3: Navigation -->
+      <div>
+        <h3 class="font-serif text-xl text-white mb-6">Quick Links</h3>
+        <ul class="space-y-3">
+          {footerLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-white/60 text-sm hover:text-brand-gold transition-colors duration-300"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Column 4: Book With Us CTA -->
+      <div>
+        <h3 class="font-serif text-xl text-white mb-6">Book With Us</h3>
+        <p class="text-white/60 text-sm mb-6 leading-relaxed">
+          Ready to make your next event unforgettable? Let us bring the cart to you.
+        </p>
+        <a href="/booking" class="btn-primary text-xs">
+          Book Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
+      <p class="text-white/40 text-xs tracking-wide">
+        &copy; 2026 Create It Sis. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

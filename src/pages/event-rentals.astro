@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Event Rentals | Create It Sis" description="Premium event rental items to complement your party cart.">
+  <Navigation />
+
+  <!-- Hero -->
+  <section class="pt-32 pb-16 px-6 md:px-12 lg:px-20 bg-brand-dark">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="section-label">Event Rentals</span>
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl mt-4 mb-6">Elevate Your Setup</h1>
+      <p class="text-white/60 max-w-2xl mx-auto text-lg">
+        Complement your cart rental with our curated selection of event pieces designed to make a statement.
+      </p>
+    </div>
+  </section>
+
+  <!-- Rentals Grid -->
+  <section class="section-padding bg-brand-dark">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Rainbow Arch -->
+      <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+        <div class="aspect-[4/3] bg-brand-dark flex items-center justify-center">
+          <div class="text-center text-white/30">
+            <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
+            <span class="text-sm uppercase tracking-widest">Rainbow Arch Image</span>
+          </div>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif text-2xl">Rainbow Arch</h3>
+            <span class="text-brand-gold font-semibold text-xl">$200<span class="text-sm text-white/40">/day</span></span>
+          </div>
+          <p class="text-white/60 mb-6">A stunning 7-foot rainbow arch that creates the perfect backdrop for photos and celebrations.</p>
+          <ul class="space-y-2 mb-6 text-white/50 text-sm">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>7ft tall stunning arch</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Perfect for photo backdrops</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Multiple color schemes</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Easy setup included</li>
+          </ul>
+          <a href="/booking" class="btn-primary w-full text-center">Book This Rental</a>
+        </div>
+      </div>
+
+      <!-- Champagne Wall - Coming Soon -->
+      <div class="bg-brand-charcoal rounded-lg overflow-hidden opacity-50 pointer-events-none">
+        <div class="aspect-[4/3] bg-brand-dark flex items-center justify-center">
+          <div class="text-center text-white/30">
+            <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-sm uppercase tracking-widest">Coming Soon</span>
+          </div>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif text-2xl">Champagne Wall</h3>
+            <span class="text-white/40 font-semibold text-sm uppercase tracking-wider">Coming Soon</span>
+          </div>
+          <p class="text-white/40 mb-6">An elegant champagne wall for a show-stopping bubbly presentation at your next event.</p>
+          <div class="btn-primary w-full text-center opacity-50 cursor-not-allowed">Unavailable</div>
+        </div>
+      </div>
+
+      <!-- Additional Rentals - Coming Soon -->
+      <div class="bg-brand-charcoal rounded-lg overflow-hidden opacity-50 pointer-events-none">
+        <div class="aspect-[4/3] bg-brand-dark flex items-center justify-center">
+          <div class="text-center text-white/30">
+            <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span class="text-sm uppercase tracking-widest">Coming Soon</span>
+          </div>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif text-2xl">More Rentals</h3>
+            <span class="text-white/40 font-semibold text-sm uppercase tracking-wider">Coming Soon</span>
+          </div>
+          <p class="text-white/40 mb-6">We're always expanding our collection. Stay tuned for new and exciting event rental options.</p>
+          <div class="btn-primary w-full text-center opacity-50 cursor-not-allowed">Unavailable</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 md:px-12 lg:px-20 bg-brand-gold text-brand-dark text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-serif text-3xl md:text-4xl mb-4">Ready to Plan Your Event?</h2>
+      <p class="text-brand-dark/70 mb-8">Combine our carts and event rentals for the ultimate celebration setup.</p>
+      <a href="/booking" class="inline-block bg-brand-dark text-white font-semibold px-8 py-3.5 tracking-wider text-sm uppercase hover:bg-brand-dark/90 transition-all duration-300">Book Now</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
