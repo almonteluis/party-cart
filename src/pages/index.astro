@@ -4,80 +4,89 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import FAQAccordion from '../components/FAQAccordion';
 
-const carts = [
+const backdropServices = [
   {
-    name: 'Candy Cart',
-    price: '$275',
-    description:
-      'A stunning display of sweets and treats that delights guests of all ages. Perfect for weddings, birthdays, and family celebrations.',
+    name: 'Arch Frames',
+    price: '$15',
+    description: 'Arch frames made from durable material, 6 ft high, 7.2 ft wide, 2.75 in thick. Perfect base for balloon installations.',
+    tag: 'Per frame',
   },
   {
-    name: 'Champagne Cart',
-    price: '$300',
-    description:
-      'Elevate the toast with our elegant champagne cart. Complete with glassware and all the accessories for a sophisticated celebration.',
+    name: 'Arch Covers',
+    price: '$20',
+    description: 'Solid color covers of your choice. Graphic design or textured fabric available at additional cost.',
+    tag: 'Each',
   },
   {
-    name: 'Snack Cart',
-    price: '$275',
-    description:
-      'A curated selection of savory and sweet snacks presented beautifully. Great for casual events, corporate gatherings, and parties.',
+    name: 'Curtain + Frame',
+    price: '$30',
+    description: 'Curtain and frame setup, 8 ft high by 10 ft wide. Custom designs available at additional cost.',
+    tag: 'Each',
   },
   {
-    name: 'Shot Cart',
-    price: '$350',
-    description:
-      'Bring the energy with our premium shot cart. Includes themed shot glasses, a variety of pour options, and stylish presentation.',
+    name: '5ft Balloon Installation',
+    price: '$160',
+    description: '5 ft tall balloon installation. Includes delivery. Balloons sold separately.',
+    tag: 'Per installation',
+  },
+  {
+    name: '7.2ft Arch Balloons',
+    price: '$200',
+    description: '7.2 ft tall balloon arch installation. Includes delivery. Balloons sold separately.',
+    tag: 'Per installation',
+  },
+  {
+    name: 'Balloon Garland',
+    price: '$120',
+    description: '6 ft long balloon garland. Includes delivery. Balloons sold separately. Bottom arrangement available at extra cost.',
+    tag: 'Per installation',
+  },
+  {
+    name: 'Balloon Spiral',
+    price: '$120',
+    description: '6 ft long balloon spiral arrangement. Includes delivery. Balloons sold separately. Bottom arrangement available at extra cost.',
+    tag: 'Per installation',
   },
 ];
 
-const packages = [
+const addOnServices = [
   {
-    name: 'Cart Only',
-    price: '$275+',
-    description: 'Basic rental, DIY setup.',
-    features: [
-      'Cart of your choice',
-      'Delivery and pickup',
-      'Standard setup',
-      'DIY stocking and management',
-      'Up to 4-hour rental',
-    ],
-    highlighted: false,
+    name: 'Clipart Graphics',
+    price: '$60',
+    description: 'Custom clipart and graphics applied to balloons and decor. Additional materials cost extra.',
+    icon: 'design',
   },
   {
-    name: 'Cart + Branding',
-    price: '$375+',
-    description: 'Custom branding and setup included.',
-    features: [
-      'Cart of your choice',
-      'Custom branded signage and decor',
-      'Professional setup and styling',
-      'Delivery and pickup',
-      'Up to 6-hour rental',
-    ],
-    highlighted: true,
+    name: 'Creative Consulting',
+    price: '$500',
+    description: 'A creative consultation with our design & research team to create the event of your dreams.',
+    icon: 'consulting',
   },
   {
-    name: 'Cart + Branding + Decor',
-    price: '$475+',
-    description: 'Full service with premium decorations.',
-    features: [
-      'Cart of your choice',
-      'Full custom branding and signage',
-      'Premium event decorations',
-      'Professional setup and breakdown',
-      'Up to 8-hour rental',
-    ],
-    highlighted: false,
+    name: 'Dessert Cart',
+    price: '$120',
+    description: 'A luxury dessert cart to display your cakes, treats & more! Fill not included.',
+    icon: 'cart',
+  },
+  {
+    name: 'Event Planning',
+    price: '$500',
+    description: 'Full event planning & coordination. We handle every detail so you can enjoy your celebration.',
+    icon: 'planning',
+  },
+  {
+    name: 'Centerpieces',
+    price: '$10-$50+',
+    description: 'Shop through our inventory or add post-event cleanup. Use balloons or custom designs tailored to your event.',
+    icon: 'centerpiece',
   },
 ];
 
 const steps = [
   {
     number: '1',
-    title: 'Choose Your Rental',
-    description: 'Browse our collection of premium carts and select the perfect one for your event.',
+    title: 'Choose Your Services',
+    description: 'Browse our backdrop installations, balloon services, and add-ons to build your perfect event.',
   },
   {
     number: '2',
@@ -87,7 +96,7 @@ const steps = [
   {
     number: '3',
     title: 'Finalize Details',
-    description: 'We will confirm availability, discuss customizations, and finalize your booking.',
+    description: 'We confirm availability, discuss customizations, and finalize your booking with a deposit.',
   },
   {
     number: '4',
@@ -97,7 +106,7 @@ const steps = [
 ];
 ---
 
-<Layout title="Create It Sis | Premier Mobile Party Cart Rentals">
+<Layout title="Create It Sis | Event Decor, Balloon Installations & Party Rentals">
   <Navigation />
 
   <main>
@@ -115,24 +124,28 @@ const steps = [
       <div
         class="absolute inset-0 pointer-events-none"
         aria-hidden="true"
-        style="background: radial-gradient(ellipse at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 70%)"
+        style="background: radial-gradient(ellipse at 50% 40%, rgba(233,30,140,0.06) 0%, transparent 70%)"
       ></div>
 
       <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div class="mb-8">
+          <img src="/images/logo.png" alt="Create It Sis" class="w-28 h-28 rounded-full mx-auto mb-6 object-contain" />
+        </div>
+        <p class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold mb-4">Let's Create Together!</p>
         <h1
           class="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
         >
           Elevate Your Celebration
         </h1>
         <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Premium mobile party cart rentals that bring the party to you
+          Premium event decor, balloon installations &amp; party rentals in the New York area
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="/booking" class="btn-primary">
             Book Now
           </a>
-          <a href="/#carts" class="btn-outline">
-            View Our Carts
+          <a href="/#services" class="btn-outline">
+            View Our Services
           </a>
         </div>
       </div>
@@ -154,58 +167,104 @@ const steps = [
       </div>
     </section>
 
-    <!-- ===================== FEATURED CARTS SECTION ===================== -->
-    <section id="carts" class="section-padding">
+    <!-- ===================== FEATURED SERVICES OVERVIEW ===================== -->
+    <section id="services" class="section-padding">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
-          <span class="section-label">Our Collection</span>
+          <span class="section-label">Our Services</span>
           <h2 class="font-serif text-4xl md:text-5xl text-white mt-3">
-            Choose Your Cart
+            Quality Service &bull; Affordable Price &bull; Professional Touch
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {carts.map((cart) => (
-            <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
-              <!-- Placeholder image area -->
-              <div class="aspect-[4/3] bg-brand-dark flex items-center justify-center relative overflow-hidden">
-                <div class="text-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1"
-                    class="text-white/20 mx-auto mb-2"
-                  >
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
-                  <span class="text-white/20 text-xs uppercase tracking-wider">
-                    {cart.name}
-                  </span>
-                </div>
-                <!-- Hover overlay -->
-                <div class="absolute inset-0 bg-brand-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Backdrop -->
+          <div class="bg-brand-charcoal rounded-lg p-8 text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div class="w-16 h-16 bg-brand-pink/10 rounded-full flex items-center justify-center mx-auto mb-5">
+              <svg class="w-8 h-8 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-white mb-3">Backdrop Services</h3>
+            <p class="text-white/50 text-sm mb-4">Arch frames, balloon installations, garlands &amp; curtains starting at $15.</p>
+            <a href="/#backdrop" class="text-brand-gold text-sm font-medium hover:text-brand-gold/80 transition-colors duration-300">View All &rarr;</a>
+          </div>
 
+          <!-- Add-ons -->
+          <div class="bg-brand-charcoal rounded-lg p-8 text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div class="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-5">
+              <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" /></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-white mb-3">Add-On Services</h3>
+            <p class="text-white/50 text-sm mb-4">Dessert cart, event planning, centerpieces &amp; creative consulting.</p>
+            <a href="/#addons" class="text-brand-gold text-sm font-medium hover:text-brand-gold/80 transition-colors duration-300">View All &rarr;</a>
+          </div>
+
+          <!-- Full Service -->
+          <div class="bg-brand-charcoal rounded-lg p-8 text-center group hover:-translate-y-1 transition-transform duration-300">
+            <div class="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-5">
+              <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" /></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-white mb-3">Full Event Planning</h3>
+            <p class="text-white/50 text-sm mb-4">End-to-end event planning &amp; coordination from $500. You dream it, we create it.</p>
+            <a href="/booking" class="text-brand-gold text-sm font-medium hover:text-brand-gold/80 transition-colors duration-300">Get Started &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BACKDROP SERVICES SECTION ===================== -->
+    <section id="backdrop" class="section-padding bg-brand-charcoal">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <span class="section-label">Backdrop</span>
+          <h2 class="font-serif text-4xl md:text-5xl text-white mt-3">
+            Backdrop &amp; Balloon Services
+          </h2>
+          <p class="text-white/50 text-base mt-4 max-w-2xl mx-auto">Stunning arches, garlands, and balloon installations that transform any space.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {backdropServices.map((service) => (
+            <div class="bg-brand-dark rounded-lg p-6 border border-white/5 hover:border-brand-pink/30 transition-colors duration-300">
+              <div class="flex items-baseline justify-between mb-3">
+                <h3 class="font-serif text-lg text-white">{service.name}</h3>
+                <span class="text-brand-pink font-bold text-xl">{service.price}</span>
+              </div>
+              <p class="text-white/50 text-sm leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ADD-ON SERVICES SECTION ===================== -->
+    <section id="addons" class="section-padding">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <span class="section-label">Add-On Services</span>
+          <h2 class="font-serif text-4xl md:text-5xl text-white mt-3">
+            Make It Extra Special
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {addOnServices.map((service) => (
+            <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
               <!-- Card content -->
-              <div class="p-6">
-                <div class="flex items-baseline justify-between mb-3">
-                  <h3 class="font-serif text-xl text-white">{cart.name}</h3>
-                  <span class="text-brand-gold font-semibold text-lg">{cart.price}</span>
+              <div class="p-8">
+                <div class="flex items-baseline justify-between mb-4">
+                  <h3 class="font-serif text-xl text-white">{service.name}</h3>
+                  <span class="text-brand-gold font-bold text-lg">{service.price}</span>
                 </div>
-                <p class="text-white/50 text-sm leading-relaxed mb-4">
-                  {cart.description}
+                <p class="text-white/50 text-sm leading-relaxed">
+                  {service.description}
                 </p>
                 <a
-                  href="/carts"
-                  class="inline-flex items-center text-brand-gold text-sm font-medium hover:text-brand-gold/80 transition-colors duration-300 group/link"
+                  href="/booking"
+                  class="inline-flex items-center text-brand-gold text-sm font-medium hover:text-brand-gold/80 transition-colors duration-300 mt-4 group/link"
                 >
-                  Learn More
+                  Book Now
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -222,81 +281,46 @@ const steps = [
               </div>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
 
-    <!-- ===================== PACKAGES SECTION ===================== -->
-    <section id="packages" class="section-padding bg-brand-charcoal">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14">
-          <span class="section-label">Packages</span>
-          <h2 class="font-serif text-4xl md:text-5xl text-white mt-3">
-            Find Your Perfect Package
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          {packages.map((pkg) => (
-            <div
-              class={`relative rounded-lg p-8 flex flex-col ${
-                pkg.highlighted
-                  ? 'bg-brand-dark border-2 border-brand-gold'
-                  : 'bg-brand-dark border border-white/10'
-              }`}
-            >
-              {pkg.highlighted && (
-                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span class="bg-brand-gold text-brand-dark text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
-              <div class="text-center mb-6">
-                <h3 class="font-serif text-2xl text-white mb-2">{pkg.name}</h3>
-                <p class="text-white/50 text-sm mb-4">{pkg.description}</p>
-                <div class="text-brand-gold font-serif text-4xl">{pkg.price}</div>
+          <!-- Dessert Cart with actual image -->
+          <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300 md:col-span-2 lg:col-span-1">
+            <div class="aspect-[4/3] bg-brand-dark overflow-hidden">
+              <img src="/images/dessert-cart.png" alt="Luxury Dessert Cart" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-8">
+              <div class="flex items-baseline justify-between mb-4">
+                <h3 class="font-serif text-xl text-white">Dessert Cart</h3>
+                <span class="text-brand-gold font-bold text-lg">$120</span>
               </div>
-
-              <ul class="space-y-3 mb-8 flex-grow">
-                {pkg.features.map((feature) => (
-                  <li class="flex items-start gap-3 text-white/70 text-sm">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      class="text-brand-gold flex-shrink-0 mt-0.5"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
+              <p class="text-white/50 text-sm leading-relaxed">
+                A luxury dessert cart to display your cakes, treats &amp; more! Fill not included.
+              </p>
               <a
                 href="/booking"
-                class={`block text-center font-semibold px-8 py-3.5 tracking-wider text-sm uppercase transition-all duration-300 ${
-                  pkg.highlighted
-                    ? 'bg-brand-gold text-brand-dark hover:bg-brand-gold/90'
-                    : 'border border-white/60 text-white hover:bg-white hover:text-brand-dark'
-                }`}
+                class="inline-flex items-center text-brand-gold text-sm font-medium hover:text-brand-gold/80 transition-colors duration-300 mt-4 group/link"
               >
-                Get Started
+                Book Now
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="ml-1 transform group-hover/link:translate-x-1 transition-transform duration-300"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </a>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ===================== HOW IT WORKS SECTION ===================== -->
-    <section id="how-it-works" class="section-padding">
+    <section id="how-it-works" class="section-padding bg-brand-charcoal">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
           <span class="section-label">How It Works</span>
@@ -309,8 +333,8 @@ const steps = [
           {steps.map((step, i) => (
             <div class="text-center relative">
               <!-- Number circle -->
-              <div class="w-16 h-16 rounded-full border-2 border-brand-gold flex items-center justify-center mx-auto mb-5 relative z-10 bg-brand-dark">
-                <span class="font-serif text-2xl text-brand-gold">{step.number}</span>
+              <div class="w-16 h-16 rounded-full border-2 border-brand-pink flex items-center justify-center mx-auto mb-5 relative z-10 bg-brand-dark">
+                <span class="font-serif text-2xl text-brand-pink">{step.number}</span>
               </div>
               <h3 class="font-serif text-xl text-white mb-3">{step.title}</h3>
               <p class="text-white/50 text-sm leading-relaxed">{step.description}</p>
@@ -326,12 +350,12 @@ const steps = [
     </section>
 
     <!-- ===================== ABOUT PREVIEW SECTION ===================== -->
-    <section id="about" class="section-padding bg-brand-charcoal">
+    <section id="about" class="section-padding">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
           <span class="section-label">About Us</span>
           <h2 class="font-serif text-4xl md:text-5xl text-white mt-3">
-            We Bring the Party to You
+            Let's Create Together!
           </h2>
         </div>
 
@@ -339,42 +363,44 @@ const steps = [
           <!-- Text content -->
           <div>
             <p class="text-white/70 text-base md:text-lg leading-relaxed mb-6">
-              Create It Sis is a premier mobile party cart rental service dedicated to
-              making every celebration unforgettable. From intimate gatherings to grand
-              events, our beautifully styled carts add a touch of elegance and fun that
-              your guests will remember.
+              Create It Sis is a premier event decor and party rental service based in Middletown, NY. From stunning balloon installations and backdrop designs to luxury dessert carts and full event planning, we bring your vision to life.
             </p>
             <p class="text-white/70 text-base md:text-lg leading-relaxed mb-8">
-              Founded with a passion for creating memorable experiences, we handle
-              everything from delivery and setup to styling and customization. Whether
-              you are planning a wedding, corporate event, birthday, or any special
-              occasion, we have the perfect cart for you.
+              We believe every celebration deserves a professional touch at an affordable price. Whether you're planning a wedding, birthday, corporate event, or any special occasion, we handle the details so you can enjoy the moment.
             </p>
+            <div class="flex items-center gap-4 mb-8">
+              <div class="text-center">
+                <span class="text-brand-pink font-bold text-2xl block">NY</span>
+                <span class="text-white/40 text-xs uppercase tracking-wider">Based</span>
+              </div>
+              <div class="w-px h-10 bg-white/10"></div>
+              <div class="text-center">
+                <span class="text-brand-pink font-bold text-2xl block">20mi</span>
+                <span class="text-white/40 text-xs uppercase tracking-wider">Radius</span>
+              </div>
+              <div class="w-px h-10 bg-white/10"></div>
+              <div class="text-center">
+                <span class="text-brand-pink font-bold text-2xl block">50%</span>
+                <span class="text-white/40 text-xs uppercase tracking-wider">Deposit</span>
+              </div>
+            </div>
             <a href="/about" class="btn-primary">
               Learn More
             </a>
           </div>
 
-          <!-- Placeholder image area -->
-          <div class="aspect-[4/3] bg-brand-dark rounded-lg flex items-center justify-center">
-            <div class="text-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="56"
-                height="56"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1"
-                class="text-white/15 mx-auto mb-3"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                <circle cx="8.5" cy="8.5" r="1.5" />
-                <polyline points="21 15 16 10 5 21" />
-              </svg>
-              <span class="text-white/15 text-sm uppercase tracking-wider">
-                About Image
-              </span>
+          <!-- Logo & images -->
+          <div class="space-y-6">
+            <div class="bg-brand-charcoal rounded-lg p-8 flex items-center justify-center">
+              <img src="/images/logo.png" alt="Create It Sis Logo" class="w-48 h-48 rounded-full object-contain" />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="aspect-square bg-brand-charcoal rounded-lg overflow-hidden">
+                <img src="/images/arch-frame-specs.jpg" alt="Arch Frame Specifications" class="w-full h-full object-contain p-2" />
+              </div>
+              <div class="aspect-square bg-brand-charcoal rounded-lg overflow-hidden">
+                <img src="/images/cylinder-pedestals.png" alt="Cylinder Pedestals" class="w-full h-full object-contain p-2" />
+              </div>
             </div>
           </div>
         </div>
@@ -382,7 +408,7 @@ const steps = [
     </section>
 
     <!-- ===================== FAQ SECTION ===================== -->
-    <section id="faq" class="section-padding">
+    <section id="faq" class="section-padding bg-brand-charcoal">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
           <span class="section-label">FAQ</span>
@@ -398,14 +424,15 @@ const steps = [
     <!-- ===================== CTA SECTION ===================== -->
     <section class="bg-brand-gold py-16 md:py-20 px-6">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-brand-dark leading-tight mb-8">
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-brand-dark leading-tight mb-4">
           Ready to Make Your Event Unforgettable?
         </h2>
+        <p class="text-brand-dark/70 text-lg mb-8">Serving New York, NY &amp; 20-mile radius</p>
         <a
           href="/booking"
           class="inline-block bg-brand-dark text-white font-semibold px-10 py-4 tracking-wider text-sm uppercase hover:bg-brand-dark/90 transition-all duration-300"
         >
-          Book Your Cart Today
+          Book Your Event Today
         </a>
       </div>
     </section>

@@ -1,8 +1,8 @@
 import { useState, type FormEvent } from 'react';
 
 const eventTypes = ['Wedding', 'Birthday', 'Corporate Event', 'Baby Shower', 'Graduation', 'Holiday Party', 'Other'];
-const cartOptions = ['Candy Cart', 'Champagne Cart', 'Snack Cart', 'Shot Cart'];
-const addOns = ['Custom Branding', 'Decor Package', 'Extra Setup Time'];
+const backdropOptions = ['Arch Frames ($15)', 'Arch Covers ($20)', 'Curtain + Frame ($30)', '5ft Balloon Installation ($160)', '7.2ft Arch Balloons ($200)', 'Balloon Garland ($120)', 'Balloon Spiral ($120)'];
+const addOnOptions = ['Clipart Graphics ($60)', 'Creative Consulting ($500)', 'Dessert Cart ($120)', 'Event Planning ($500)', 'Centerpieces ($10-$50+)'];
 const referralSources = ['Instagram', 'Facebook', 'Google Search', 'Friend/Family Referral', 'Event/Venue Referral', 'Other'];
 
 export default function BookingForm() {
@@ -16,7 +16,7 @@ export default function BookingForm() {
     eventType: '',
     eventLocation: '',
     setting: '',
-    selectedCarts: [] as string[],
+    selectedBackdrop: [] as string[],
     selectedAddOns: [] as string[],
     referralSource: '',
     notes: '',
@@ -29,7 +29,7 @@ export default function BookingForm() {
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: '' }));
   };
 
-  const toggleArrayItem = (field: 'selectedCarts' | 'selectedAddOns', item: string) => {
+  const toggleArrayItem = (field: 'selectedBackdrop' | 'selectedAddOns', item: string) => {
     setFormData((prev) => ({
       ...prev,
       [field]: prev[field].includes(item) ? prev[field].filter((i) => i !== item) : [...prev[field], item],
@@ -59,8 +59,8 @@ export default function BookingForm() {
   if (submitted) {
     return (
       <div className="bg-brand-charcoal rounded-lg p-12 text-center">
-        <div className="w-16 h-16 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg className="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="w-16 h-16 bg-brand-pink/20 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg className="w-8 h-8 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -71,7 +71,7 @@ export default function BookingForm() {
   }
 
   const inputClass = (field: string) =>
-    `w-full bg-brand-dark border ${errors[field] ? 'border-red-500' : 'border-white/10'} rounded px-4 py-3 text-white placeholder-white/30 focus:border-brand-gold focus:outline-none transition-colors`;
+    `w-full bg-brand-dark border ${errors[field] ? 'border-red-500' : 'border-white/10'} rounded px-4 py-3 text-white placeholder-white/30 focus:border-brand-pink focus:outline-none transition-colors`;
 
   const labelClass = 'block text-sm text-white/60 mb-2';
 
@@ -132,7 +132,7 @@ export default function BookingForm() {
           <div className="flex gap-6">
             {['Indoor', 'Outdoor'].map((opt) => (
               <label key={opt} className="flex items-center gap-2 cursor-pointer">
-                <input type="radio" name="setting" value={opt.toLowerCase()} checked={formData.setting === opt.toLowerCase()} onChange={(e) => updateField('setting', e.target.value)} className="accent-[#c9a84c]" />
+                <input type="radio" name="setting" value={opt.toLowerCase()} checked={formData.setting === opt.toLowerCase()} onChange={(e) => updateField('setting', e.target.value)} className="accent-[#e91e8c]" />
                 <span className="text-white/60 text-sm">{opt}</span>
               </label>
             ))}
@@ -140,26 +140,26 @@ export default function BookingForm() {
         </div>
       </div>
 
-      {/* Preferences */}
+      {/* Services */}
       <div>
-        <h3 className="section-label mb-6">Preferences</h3>
+        <h3 className="section-label mb-6">Select Your Services</h3>
         <div className="mb-6">
-          <label className={labelClass}>Select Your Cart(s)</label>
+          <label className={labelClass}>Backdrop &amp; Balloon Services</label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {cartOptions.map((cart) => (
-              <label key={cart} className="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" checked={formData.selectedCarts.includes(cart)} onChange={() => toggleArrayItem('selectedCarts', cart)} className="accent-[#c9a84c]" />
-                <span className="text-white/60 text-sm">{cart}</span>
+            {backdropOptions.map((service) => (
+              <label key={service} className="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" checked={formData.selectedBackdrop.includes(service)} onChange={() => toggleArrayItem('selectedBackdrop', service)} className="accent-[#e91e8c]" />
+                <span className="text-white/60 text-sm">{service}</span>
               </label>
             ))}
           </div>
         </div>
         <div>
-          <label className={labelClass}>Add-Ons</label>
+          <label className={labelClass}>Add-On Services</label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {addOns.map((addon) => (
+            {addOnOptions.map((addon) => (
               <label key={addon} className="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" checked={formData.selectedAddOns.includes(addon)} onChange={() => toggleArrayItem('selectedAddOns', addon)} className="accent-[#c9a84c]" />
+                <input type="checkbox" checked={formData.selectedAddOns.includes(addon)} onChange={() => toggleArrayItem('selectedAddOns', addon)} className="accent-[#e91e8c]" />
                 <span className="text-white/60 text-sm">{addon}</span>
               </label>
             ))}

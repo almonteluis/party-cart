@@ -10,6 +10,9 @@ export default {
           gold: '#c9a84c',
           cream: '#f5f0e8',
           sage: '#6b7c5e',
+          pink: '#e91e8c',
+          'pink-light': '#f472b6',
+          'pink-dark': '#be185d',
         },
       },
       fontFamily: {

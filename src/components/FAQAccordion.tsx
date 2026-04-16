@@ -7,19 +7,19 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'How do I book a cart?',
+    question: 'How do I book a service?',
     answer:
-      'Simply fill out our online booking form with your event details, preferred cart, and date. We will review your request and send a confirmation within 24 hours. A deposit is required to secure your reservation.',
+      'Simply fill out our online booking form with your event details, preferred services, and date. We will review your request and send a confirmation within 24 hours. A 50% deposit is required to secure your reservation.',
   },
   {
-    question: 'What areas do you deliver to?',
+    question: 'What areas do you serve?',
     answer:
-      'We currently serve the greater Hudson Valley area and surrounding regions within a 50-mile radius. Additional travel fees may apply for locations outside our standard service area. Contact us for specific location inquiries.',
+      'We are based in Middletown, NY and serve New York, NY and the surrounding 20-mile radius. Additional travel fees may apply for locations outside our standard service area. Contact us for specific location inquiries.',
   },
   {
     question: 'Is a deposit required?',
     answer:
-      'Yes, a non-refundable deposit of 50% is required at the time of booking to secure your date and cart. The remaining balance is due 48 hours before your event.',
+      'Yes, a non-refundable deposit of 50% is required at the time of booking to secure your date. The remaining balance is due 48 hours before your event. We accept Apple Pay and Zelle.',
   },
   {
     question: 'What is your cancellation policy?',
@@ -27,24 +27,24 @@ const faqs: FAQItem[] = [
       'Cancellations made more than 14 days before the event will receive a full refund minus the deposit. Cancellations within 14 days of the event are non-refundable. We are happy to work with you on rescheduling when possible.',
   },
   {
-    question: 'Can I customize my cart?',
+    question: 'Can I customize my backdrop or balloon installation?',
     answer:
-      'Absolutely! Our Cart + Branding and Full Service packages include customization options such as custom signage, branded decor, themed color schemes, and personalized accessories. Let us know your vision and we will bring it to life.',
+      'Absolutely! We offer custom arch covers, graphic designs, textured fabrics, and clipart graphics. Our creative consulting service ($500) includes a full design session with our team to create your dream setup.',
   },
   {
     question: 'How long does setup take?',
     answer:
-      'Setup typically takes 30 to 45 minutes depending on the package and customizations. We arrive early to ensure everything is perfect before your guests arrive. Breakdown takes about 20 to 30 minutes after the event.',
+      'Setup typically takes 30 to 60 minutes depending on the services selected. Balloon installations and backdrop setups may take longer. We arrive early to ensure everything is perfect before your guests arrive. Breakdown takes about 20 to 30 minutes after the event.',
   },
   {
-    question: 'What items are included with each cart?',
+    question: 'Are balloons included in the installation price?',
     answer:
-      'Each cart comes fully stocked based on its theme. Candy Carts include a variety of candies and treats, Champagne Carts include glassware and accessories, Snack Carts include a curated snack selection, and Shot Carts include shot glasses and serving accessories. Specific item lists are provided upon booking.',
+      'Balloons are sold separately from our installation services. The installation prices cover delivery, professional setup, and arrangement. We can source balloons for you or you can provide your own.',
   },
   {
-    question: 'Do you provide an attendant for the event?',
+    question: 'Do you offer full event planning?',
     answer:
-      'Our basic packages are DIY, but we offer attendant service as an add-on for an additional fee. An attendant will manage the cart, serve guests, and ensure everything runs smoothly throughout your event.',
+      'Yes! Our full event planning service ($500) includes complete event coordination, vendor management, and day-of coordination. We also offer creative consulting ($500) which includes a one-on-one design session with mood boards and concepts.',
   },
 ];
 

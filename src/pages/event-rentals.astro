@@ -4,81 +4,132 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Event Rentals | Create It Sis" description="Premium event rental items to complement your party cart.">
+<Layout title="Add-On Services | Create It Sis" description="Enhance your event with our add-on services: dessert cart, event planning, centerpieces, and more.">
   <Navigation />
 
   <!-- Hero -->
   <section class="pt-32 pb-16 px-6 md:px-12 lg:px-20 bg-brand-dark">
     <div class="max-w-6xl mx-auto text-center">
-      <span class="section-label">Event Rentals</span>
-      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl mt-4 mb-6">Elevate Your Setup</h1>
+      <span class="section-label">Add-On Services</span>
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl mt-4 mb-6">Make It Extra Special</h1>
       <p class="text-white/60 max-w-2xl mx-auto text-lg">
-        Complement your cart rental with our curated selection of event pieces designed to make a statement.
+        Elevate your event with our premium add-on services. From creative consulting to full event planning.
       </p>
     </div>
   </section>
 
-  <!-- Rentals Grid -->
+  <!-- Add-Ons Grid -->
   <section class="section-padding bg-brand-dark">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Rainbow Arch -->
+      <!-- Clipart Graphics -->
       <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
-        <div class="aspect-[4/3] bg-brand-dark flex items-center justify-center">
-          <div class="text-center text-white/30">
-            <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
-            <span class="text-sm uppercase tracking-widest">Rainbow Arch Image</span>
-          </div>
-        </div>
         <div class="p-8">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="font-serif text-2xl">Rainbow Arch</h3>
-            <span class="text-brand-gold font-semibold text-xl">$200<span class="text-sm text-white/40">/day</span></span>
+            <h3 class="font-serif text-2xl">Clipart Graphics</h3>
+            <span class="text-brand-gold font-semibold text-xl">$60</span>
           </div>
-          <p class="text-white/60 mb-6">A stunning 7-foot rainbow arch that creates the perfect backdrop for photos and celebrations.</p>
+          <p class="text-white/60 mb-6">Custom clipart and graphics applied to balloons and event decor. Additional materials cost extra.</p>
           <ul class="space-y-2 mb-6 text-white/50 text-sm">
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>7ft tall stunning arch</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Perfect for photo backdrops</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Multiple color schemes</li>
-            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Easy setup included</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Custom balloon graphics</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Event-themed designs</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Professional application</li>
           </ul>
-          <a href="/booking" class="btn-primary w-full text-center">Book This Rental</a>
+          <a href="/booking" class="btn-primary w-full text-center">Book This Service</a>
         </div>
       </div>
 
-      <!-- Champagne Wall - Coming Soon -->
-      <div class="bg-brand-charcoal rounded-lg overflow-hidden opacity-50 pointer-events-none">
-        <div class="aspect-[4/3] bg-brand-dark flex items-center justify-center">
-          <div class="text-center text-white/30">
-            <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <span class="text-sm uppercase tracking-widest">Coming Soon</span>
-          </div>
-        </div>
+      <!-- Creative Consulting -->
+      <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
         <div class="p-8">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="font-serif text-2xl">Champagne Wall</h3>
-            <span class="text-white/40 font-semibold text-sm uppercase tracking-wider">Coming Soon</span>
+            <h3 class="font-serif text-2xl">Creative Consulting</h3>
+            <span class="text-brand-gold font-semibold text-xl">$500</span>
           </div>
-          <p class="text-white/40 mb-6">An elegant champagne wall for a show-stopping bubbly presentation at your next event.</p>
-          <div class="btn-primary w-full text-center opacity-50 cursor-not-allowed">Unavailable</div>
+          <p class="text-white/60 mb-6">A creative consultation with our design &amp; research team to create the event of your dreams.</p>
+          <ul class="space-y-2 mb-6 text-white/50 text-sm">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>One-on-one design session</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Mood board &amp; concept</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Vendor recommendations</li>
+          </ul>
+          <a href="/booking" class="btn-primary w-full text-center">Book This Service</a>
         </div>
       </div>
 
-      <!-- Additional Rentals - Coming Soon -->
-      <div class="bg-brand-charcoal rounded-lg overflow-hidden opacity-50 pointer-events-none">
-        <div class="aspect-[4/3] bg-brand-dark flex items-center justify-center">
-          <div class="text-center text-white/30">
-            <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <span class="text-sm uppercase tracking-widest">Coming Soon</span>
-          </div>
+      <!-- Dessert Cart -->
+      <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+        <div class="aspect-[4/3] bg-brand-dark overflow-hidden">
+          <img src="/images/dessert-cart.png" alt="Luxury Dessert Cart" class="w-full h-full object-contain p-4" />
         </div>
         <div class="p-8">
           <div class="flex items-center justify-between mb-4">
-            <h3 class="font-serif text-2xl">More Rentals</h3>
-            <span class="text-white/40 font-semibold text-sm uppercase tracking-wider">Coming Soon</span>
+            <h3 class="font-serif text-2xl">Dessert Cart</h3>
+            <span class="text-brand-gold font-semibold text-xl">$120</span>
           </div>
-          <p class="text-white/40 mb-6">We're always expanding our collection. Stay tuned for new and exciting event rental options.</p>
-          <div class="btn-primary w-full text-center opacity-50 cursor-not-allowed">Unavailable</div>
+          <p class="text-white/60 mb-6">A luxury dessert cart to display your cakes, treats &amp; more! Fill not included.</p>
+          <ul class="space-y-2 mb-6 text-white/50 text-sm">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Elegant white finish</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Scalloped canopy</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Mobile with wheels</li>
+          </ul>
+          <a href="/booking" class="btn-primary w-full text-center">Book This Service</a>
+        </div>
+      </div>
+
+      <!-- Event Planning -->
+      <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif text-2xl">Event Planning</h3>
+            <span class="text-brand-gold font-semibold text-xl">$500</span>
+          </div>
+          <p class="text-white/60 mb-6">Full event planning &amp; coordination. We handle every detail from start to finish.</p>
+          <ul class="space-y-2 mb-6 text-white/50 text-sm">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Complete event coordination</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Vendor management</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Day-of coordination</li>
+          </ul>
+          <a href="/booking" class="btn-primary w-full text-center">Book This Service</a>
+        </div>
+      </div>
+
+      <!-- Centerpieces -->
+      <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+        <div class="aspect-[4/3] bg-brand-dark overflow-hidden">
+          <img src="/images/cylinder-pedestals.png" alt="Centerpiece Options" class="w-full h-full object-contain p-4" />
+        </div>
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif text-2xl">Centerpieces</h3>
+            <span class="text-brand-gold font-semibold text-xl">$10-$50+</span>
+          </div>
+          <p class="text-white/60 mb-6">Shop through our inventory or add post-event cleanup. Custom designs tailored to your event.</p>
+          <ul class="space-y-2 mb-6 text-white/50 text-sm">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Wide variety available</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Balloon centerpieces</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Custom designs</li>
+          </ul>
+          <a href="/booking" class="btn-primary w-full text-center">Book This Service</a>
+        </div>
+      </div>
+
+      <!-- Arch Frame Specs -->
+      <div class="bg-brand-charcoal rounded-lg overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+        <div class="aspect-[4/3] bg-brand-dark overflow-hidden">
+          <img src="/images/arch-frame-specs.jpg" alt="Arch Frame Specifications" class="w-full h-full object-contain p-4" />
+        </div>
+        <div class="p-8">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif text-2xl">Arch Frames</h3>
+            <span class="text-brand-gold font-semibold text-xl">$15</span>
+          </div>
+          <p class="text-white/60 mb-6">Durable arch frames available in two sizes: 4ft x 7.2ft and 2.6ft x 6ft.</p>
+          <ul class="space-y-2 mb-6 text-white/50 text-sm">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Large: 4ft x 7.2ft (1.2m x 2.2m)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Small: 2.6ft x 6ft (0.8m x 1.8m)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>Sturdy construction</li>
+          </ul>
+          <a href="/booking" class="btn-primary w-full text-center">Book This Service</a>
         </div>
       </div>
 
@@ -89,7 +140,7 @@ import Footer from '../components/Footer.astro';
   <section class="py-20 px-6 md:px-12 lg:px-20 bg-brand-gold text-brand-dark text-center">
     <div class="max-w-2xl mx-auto">
       <h2 class="font-serif text-3xl md:text-4xl mb-4">Ready to Plan Your Event?</h2>
-      <p class="text-brand-dark/70 mb-8">Combine our carts and event rentals for the ultimate celebration setup.</p>
+      <p class="text-brand-dark/70 mb-8">Combine backdrop services and add-ons for the ultimate celebration setup.</p>
       <a href="/booking" class="inline-block bg-brand-dark text-white font-semibold px-8 py-3.5 tracking-wider text-sm uppercase hover:bg-brand-dark/90 transition-all duration-300">Book Now</a>
     </div>
   </section>
